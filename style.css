@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+
+body {
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'VT323', monospace;
+    color: #fff;
+}
+
+#playWindown {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#playArea {
+    background-image: url('../assets/space.png');
+    background-position: 50%;
+    position: relative;
+    width: 650px;
+    height: 576px;
+    border: 2px solid rgb(21, 216, 28);
+    text-align: center;
+    animation: backgroundAnimation 150s linear 1s infinite running;
+}
+
+#scoreContainer {
+    position: absolute;
+    display: flex;
+    left: 10px;
+    top: 10px;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 10;
+}
+
+.score {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.game-instructions {
+    position: relative;
+    color: white;
+    top: 150px;
+    font-size: 30px;
+}
+
+.start-button {
+    position: relative;
+    color: white;
+    top: 150px;
+    cursor: pointer;
+    margin: 0 100px;
+    border: 1px solid #fff;
+    font-size: 50px;
+}
+
+.start-button:hover {
+    background-color: #fff;
+    color: chartreuse;
+}
+
+.sprite {
+    background: url('../assets/ship.png') no-repeat;
+    position: relative;
+    width: 50px;
+    height: 35px;
+    top: 520px;
+    left: 300px;
+
+}
+
+.laser {
+    background: url('../assets/laser.png') no-repeat;
+    position: relative;
+    width: 6px;
+    height: 20px;
+}
+
+.enemi {
+    background: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 45px;
+    position: relative;
+    opacity: 0;
+}
+
+.enemi-transition {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+.dead-enemi {
+    background: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 45px;
+    position: relative;
+    opacity: 0;
+}
+
+.life {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.heart {
+    background: url('../assets/heart.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-right: .5em;
+    width: 20px;
+    height: 20px;
+
+}
+
+.game-over {
+    display: none;
+}
+
+.activate {
+    display: block;
+    position: relative;
+    color: red;
+    top: 150px;
+    cursor: pointer;
+    margin: 50px 100px;
+    padding-bottom: 50px;
+    border: 1px solid #fff;
+    font-size: 50px;
+}
+
+.activate h2 {
+    margin: 0 100px;
+
+    border: 1px solid #fff;
+}
+
+.activate h2:hover {
+    color: chartreuse;
+    background: #fff;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position-y: 0%;
+    }
+
+
+    100% {
+        background-position-y: 100%;
+    }
+}
