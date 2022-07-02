@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-family: 'VT323', monospace;
     color: #fff;
+    overflow: hidden;
 }
 
 #playWindown {
